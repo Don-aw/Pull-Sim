@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2de8ea3-d562-4d8a-98f3-2ca21d2a3a9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DisplayWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Launcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/DisplayPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Display.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.launch.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",

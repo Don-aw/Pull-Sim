@@ -3,8 +3,11 @@ package main;
 public class Display {
 
     private DisplayWindow dw;
+    private DisplayPanel dp;
 
     public Display() {
-        dw = new DisplayWindow();
+        dp = new DisplayPanel();
+        dw = new DisplayWindow(dp);
+
     }
 }
