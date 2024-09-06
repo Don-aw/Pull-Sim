@@ -15,12 +15,15 @@ public class KeyboardInputs implements KeyListener {
     public void keyPressed(KeyEvent e) {
         switch(e.getKeyCode()) {
 
-            case KeyEvent.VK_R -> System.out.println("re roll");
+            case KeyEvent.VK_R -> System.out.println("re roll press");
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
+        switch(e.getKeyCode()) {
 
+            case KeyEvent.VK_R -> System.out.println("re roll release");
+        }
     }
 }

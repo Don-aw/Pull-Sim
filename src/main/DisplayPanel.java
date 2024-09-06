@@ -8,6 +8,7 @@ import java.awt.*;
 
 public class DisplayPanel extends JPanel {
 
+
     private MouseInputs mouseInputs = new MouseInputs();
     public DisplayPanel() {
 
