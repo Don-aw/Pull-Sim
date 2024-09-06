@@ -8,6 +8,6 @@ public class Display {
     public Display() {
         dp = new DisplayPanel();
         dw = new DisplayWindow(dp);
-
+        dp.requestFocus();
     }
 }
