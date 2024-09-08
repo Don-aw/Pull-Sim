@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2de8ea3-d562-4d8a-98f3-2ca21d2a3a9b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/constants/constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/RectTab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inputs/KeyboardInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/KeyboardInputs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/DisplayPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DisplayPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DisplayWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DisplayWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -55,7 +59,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/jon/IdeaProjects/Pull-Sim",
-    "settings.editor.selected.configurable": "editor.preferences.gutterIcons"
+    "settings.editor.selected.configurable": "editing.templates"
   }
 }]]></component>
   <component name="RunManager">
