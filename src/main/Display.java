@@ -1,11 +1,16 @@
 package main;
 
+import constants.constant;
+
+import java.util.ArrayList;
+
 public class Display implements Runnable{
 
     private DisplayWindow dw;
     private DisplayPanel dp;
     private Thread displayThread;
     private final int FPS_SET = 144;
+
 
     public Display() {
         dp = new DisplayPanel();
