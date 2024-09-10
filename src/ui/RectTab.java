@@ -22,9 +22,10 @@ public class RectTab {
 
     public void draw(Graphics g) {
         g.setColor(color);
-        g.fillRect(xPos - w/2, yPos - h/2, w, h);
+        g.fillRect(xPos, yPos - h/2, w, h);
     }
 
-    public void update() {
+    public void update(Graphics g) {
+        draw(g);
     }
 }
