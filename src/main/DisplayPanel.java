@@ -18,7 +18,10 @@ public class DisplayPanel extends JPanel {
     private int xDelta = 100, yDelta = 100;
     private ArrayList<RectTab> tabs = new ArrayList<>();
     private ArrayList<ArrayList<Integer>> Xs = new ArrayList<>();
-    private int flag;
+    private int addAMT = 0;
+    private int buffer = 28;
+    //int buffer = (int)constant.ANIM_TIME_SEC*constant.FPS_SET;
+
 
     private int Y;
 
@@ -51,8 +54,6 @@ public class DisplayPanel extends JPanel {
         update(g);
         //g.fillRect(xDelta, yDelta, 200, 50);
         //checkFPS();
-
-        flag = 1;
         frames++;
     }
 
@@ -69,13 +70,16 @@ public class DisplayPanel extends JPanel {
         for (RectTab tab : tabs) {
             tab.update(g);
         }
+
+        if ((frames % buffer == 0) && (addAMT != 0)) {
+            addTabs();
+        }
     }
 
     public void addTab() {
 
         if(tabs.size() == 10) {
             tabs.clear();
-            addTab();
             return;
         }
 
@@ -91,19 +95,20 @@ public class DisplayPanel extends JPanel {
     }
 
     public void addTabs() {
-        //int buffer = (int)constant.ANIM_TIME_SEC*constant.FPS_SET;
-        int buffer = 28;
+
         int c = 10 - tabs.size();
         int i = 0;
-        while ((i != c) && (flag == 1)) {
-            if (frames % buffer == 0) {
-                addTab();
+        addTab();
+        addAMT--;
 
-            }
-            flag = 0;
-            i++;
+    }
+
+    public void skipToLast() {
+        if(tabs.size() == 10) {
+            tabs.clear();
+        } else {
+            addAMT = 10 - tabs.size();
         }
-
     }
 
 

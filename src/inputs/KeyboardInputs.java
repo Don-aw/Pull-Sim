@@ -42,10 +42,7 @@ public class KeyboardInputs implements KeyListener {
             }
 
             case KeyEvent.VK_SPACE -> {
-                for (int i = 0; i < 10; i++) {
-                    dp.addTab();
-
-                }
+                dp.skipToLast();
             }
         }
     }
