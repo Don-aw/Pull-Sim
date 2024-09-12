@@ -9,7 +9,7 @@ public class Display implements Runnable{
     private DisplayWindow dw;
     private DisplayPanel dp;
     private Thread displayThread;
-    private final int FPS_SET = 144;
+
 
 
     public Display() {
@@ -27,7 +27,7 @@ public class Display implements Runnable{
     @Override
     public void run() {
 
-        double timePerFrame = 1_000_000_000.0 / FPS_SET;
+        double timePerFrame = 1_000_000_000.0 / constant.FPS_SET;
         long lastFrame = System.nanoTime();
         long now = System.nanoTime();
 

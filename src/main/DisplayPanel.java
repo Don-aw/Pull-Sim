@@ -18,6 +18,7 @@ public class DisplayPanel extends JPanel {
     private int xDelta = 100, yDelta = 100;
     private ArrayList<RectTab> tabs = new ArrayList<>();
     private ArrayList<ArrayList<Integer>> Xs = new ArrayList<>();
+    private int flag;
 
     private int Y;
 
@@ -51,12 +52,11 @@ public class DisplayPanel extends JPanel {
         //g.fillRect(xDelta, yDelta, 200, 50);
         //checkFPS();
 
-
+        flag = 1;
         frames++;
     }
 
     private void checkFPS() {
-        frames++;
         if (System.currentTimeMillis() - lastTimeCheck >= 1000) {
             lastTimeCheck = System.currentTimeMillis();
             System.out.println("FPS: " + frames);
@@ -75,6 +75,7 @@ public class DisplayPanel extends JPanel {
 
         if(tabs.size() == 10) {
             tabs.clear();
+            addTab();
             return;
         }
 
@@ -87,6 +88,22 @@ public class DisplayPanel extends JPanel {
             tab.setYPos(Y);
             i++;
         }
+    }
+
+    public void addTabs() {
+        //int buffer = (int)constant.ANIM_TIME_SEC*constant.FPS_SET;
+        int buffer = 28;
+        int c = 10 - tabs.size();
+        int i = 0;
+        while ((i != c) && (flag == 1)) {
+            if (frames % buffer == 0) {
+                addTab();
+
+            }
+            flag = 0;
+            i++;
+        }
+
     }
 
 
