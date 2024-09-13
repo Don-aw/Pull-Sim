@@ -20,7 +20,9 @@ public class DisplayPanel extends JPanel {
     private ArrayList<ArrayList<Integer>> Xs = new ArrayList<>();
     private int addAMT = 0;
     private int buffer = 28;
-    //int buffer = (int)constant.ANIM_TIME_SEC*constant.FPS_SET;
+    //private int buffer = (int)constant.ANIM_TIME_SEC*constant.FPS_SET;
+    private int pullsSinceLastSix = 0;
+    private int rate = 2;
 
 
     private int Y;
@@ -81,9 +83,17 @@ public class DisplayPanel extends JPanel {
         if(tabs.size() == 10) {
             tabs.clear();
             return;
+        } else {
+            pullsSinceLastSix++;
         }
 
-        tabs.add(new RectTab());;
+        if (pullsSinceLastSix > 50) rate = 2 + (pullsSinceLastSix - 50) * 2;
+        else rate = 2;
+
+        System.out.println(rate);
+        RectTab t = new RectTab(rate);
+        if (t.isSix()) pullsSinceLastSix = 0;
+        tabs.add(t);
 
         int i = 0;
         System.out.println(Xs.get(tabs.size() - 1));
